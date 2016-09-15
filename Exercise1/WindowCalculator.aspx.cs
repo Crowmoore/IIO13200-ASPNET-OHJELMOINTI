@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -43,10 +44,10 @@ public partial class WindowCalculator : System.Web.UI.Page
 
     private double CalculateTotalPrice(double glassArea, double borderPerimeter)
     {
-        double roi = Double.Parse(ConfigurationManager.AppSettings["roi"]);
-        double work = Double.Parse(ConfigurationManager.AppSettings["work"]);
-        double glassSquarePrice = Double.Parse(ConfigurationManager.AppSettings["glassSquarePrice"]);
-        double borderPricePerMeter = Double.Parse(ConfigurationManager.AppSettings["borderPricePerMeter"]);
+        double roi = double.Parse(ConfigurationManager.AppSettings.Get("roi"), NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
+        double work = double.Parse(ConfigurationManager.AppSettings.Get("work"), NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
+        double glassSquarePrice = double.Parse(ConfigurationManager.AppSettings.Get("glassSquarePrice"), NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
+        double borderPricePerMeter = double.Parse(ConfigurationManager.AppSettings.Get("borderPricePerMeter"), NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
 
         double totalPrice = (1 + roi) * ((glassArea * glassSquarePrice) + (borderPerimeter * borderPricePerMeter) + work);
         return totalPrice;
