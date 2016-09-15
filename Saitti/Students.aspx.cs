@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using JAMK.ICT.Data;
+using JAMK.ICT.BL;
 
 public partial class Students : System.Web.UI.Page
 {
@@ -36,5 +37,12 @@ public partial class Students : System.Web.UI.Page
         {
             lblMessages.Text = ex.Message;
         }
+    }
+
+    protected void btnGetStudentObjects_Click(object sender, EventArgs e)
+    {
+        var students = new Oppilaat().Hae3TestiOppilasta();
+        gvData.DataSource = students;
+        gvData.DataBind();
     }
 }

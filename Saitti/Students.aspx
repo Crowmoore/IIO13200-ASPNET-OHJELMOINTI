@@ -13,7 +13,7 @@
 
         <asp:Button ID="btnGet3Students" runat="server" Text="Get 3 students" OnClick="btnGet3Students_Click"/>
         <asp:Button ID="btnGetAllStudents" runat="server" Text="Get all students" OnClick="btnGetAllStudents_Click"/>
-
+        <asp:Button ID="btnGet3StudentObjects" runat="server" Text="Get 3 student objects" OnClick="btnGetStudentObjects_Click"/>
         <asp:GridView ID="gvData" runat="server" />
     </div>
     <div id="footer">
