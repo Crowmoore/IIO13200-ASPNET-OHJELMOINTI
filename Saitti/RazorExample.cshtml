@@ -1,0 +1,27 @@
+﻿@{ 
+    var dog = "Jack Russell";
+    var textfile = Server.MapPath("~/App_Data/students_list.txt");
+    Array students = File.ReadAllLines(textfile);
+ }
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Razor Page</title>
+    </head>
+    <body>
+        <h1>Hello to you @dog. Today is @DateTime.Today.ToShortDateString()</h1>
+        <div>
+            <p>
+                @{ 
+                    int i = 0;
+                    foreach (var student in students)
+                    {
+                        @student <br />
+                        i++;
+                    }
+                    @: students present @i <br />
+                }
+            </p>
+        </div>
+    </body>
+</html>
