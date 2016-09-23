@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Saitti", "Saitti\", "{3E07E2B3-CB80-4885-B897-D2149243510F}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -24,7 +24,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Saitti", "Saitti\", "{3E07E
 		SlnRelativePath = "Saitti\"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Exercise1", "Exercise1\", "{986E7002-0967-4022-A510-67636BE3FD13}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Exercise1(2)", "Exercise1\", "{986E7002-0967-4022-A510-67636BE3FD13}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_49944"
@@ -67,6 +67,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Lotto", "Lotto\", "{974C981
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Calendar(1)", "Calendar\", "{C9904B58-6852-483A-8F6A-62E7BE719892}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_4659"
+		Debug.AspNetCompiler.PhysicalPath = "Calendar\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4659\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_4659"
+		Release.AspNetCompiler.PhysicalPath = "Calendar\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4659\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4659"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +106,10 @@ Global
 		{974C9814-5A26-4C05-A673-8E5D682BD826}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{974C9814-5A26-4C05-A673-8E5D682BD826}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{974C9814-5A26-4C05-A673-8E5D682BD826}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C9904B58-6852-483A-8F6A-62E7BE719892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9904B58-6852-483A-8F6A-62E7BE719892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9904B58-6852-483A-8F6A-62E7BE719892}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9904B58-6852-483A-8F6A-62E7BE719892}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
