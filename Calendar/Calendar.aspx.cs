@@ -7,46 +7,44 @@ using System.Web.UI.WebControls;
 
 public partial class Calendar : System.Web.UI.Page
 {
-    private int day;
-    private int month;
-    private int year;
+    public int day;
+    public int month;
+    public int year;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        day = DateTime.Now.Day;
-        month = DateTime.Now.Month;
-        year = DateTime.Now.Year;
         setCurrentDateToHeader();
+        if(!IsPostBack)
+        {
+            calendar.VisibleDate = DateTime.Today;
+        }
     }
 
     private void setCurrentDateToHeader()
     {
         string date = DateTime.Now.ToString("dd.MM.yyyy");
         lblHeader.Text = "Today is " + date;
-        calendar.VisibleDate = new DateTime(year, month, day);
-        calendar.SelectedDate = new DateTime(year, month, day);
     }
 
     protected void btnPreviousYear_Click(object sender, EventArgs e)
     {
-        day = calendar.SelectedDate.Day;
-        month = calendar.SelectedDate.Month;
-        year = calendar.SelectedDate.Year;
-        calendar.VisibleDate = new DateTime(year - 1, month, day);
-        calendar.SelectedDate = new DateTime(year - 1, month, day);
+        calendar.VisibleDate = calendar.VisibleDate.AddYears(-1);
     }
 
     protected void btnNextYear_Click(object sender, EventArgs e)
     {
-        day = calendar.SelectedDate.Day;
-        month = calendar.SelectedDate.Month;
-        year = calendar.SelectedDate.Year;
-        calendar.VisibleDate = new DateTime(year + 1, month, day);
-        calendar.SelectedDate = new DateTime(year + 1, month, day);
+        calendar.VisibleDate = calendar.VisibleDate.AddYears(1);
     }
 
     protected void calendar_SelectionChanged(object sender, EventArgs e)
     {
         lblSelectedDate.Text = "Selected date: " + calendar.SelectedDate.ToString("dd.MM.yyyy");
+        TimeSpan difference = DateTime.Today - calendar.SelectedDate;
+        DateTime reference = new DateTime(1, 1, 1);
+        int years = (reference - difference).Year - reference.Year;
+        int months = (reference - difference).Month - reference.Month;
+        int days = (reference - difference).Day - reference.Day;
+        lblDateDifference.Text = string.Format("Difference between current date and selected date: Years {0} Months {1} Days {2}", years, months, days);
+        
     }
 }
