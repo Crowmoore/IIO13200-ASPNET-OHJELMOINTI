@@ -19,7 +19,7 @@
         </asp:ContentPlaceHolder>
     </div>
     <div>
-        <a href="Index.aspx">Homepage</a><a href="http://www.jamk.fi">JAMK</a>
+        <a href="Index.aspx">Homepage </a><a href="http://www.jamk.fi">JAMK</a>
         <asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder>
     </div>
     </form>
