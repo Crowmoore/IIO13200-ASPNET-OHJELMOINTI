@@ -1,8 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage.master" CodeFile="Index_master.aspx.cs" Inherits="Index" %>
 
-<!DOCTYPE html>
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <title>IIO13200 .NET Ohjelmointi</title>
 </asp:Content>
